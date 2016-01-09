@@ -1,10 +1,14 @@
+@import 'bourbon'
+@import 'neat'
+
 @import 'pages'
 
 body
   font-family: "Source Sans Pro", "Helvectica", sans-serif
 
 .container
-  width: 1000px
+  @include outer-container()
+
   display: block
   margin: 0 auto
 
