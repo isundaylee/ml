@@ -2,10 +2,13 @@
   .init-hide
     opacity: 0
 
+  #nav_logo, footer
+    display: none
+
   #logo
     width: 40%
     display: block
-    margin: 5vh auto 0
+    margin: 3vh auto 0
 
   h1
     font-weight: 300
@@ -17,3 +20,50 @@
     font-weight: 300
     font-size: 1.2em
     margin-top: 80px
+
+#pages_projects
+  #projects
+    margin-top: 50px
+
+    .project-row
+      @include fill-parent()
+      @include row(table)
+
+      .project
+        @include span-columns(1 of 4, table)
+
+        margin-top: 50px
+        height: 268px
+        padding: 10px 30px
+        position: relative
+
+        h2
+          position: absolute
+          font-weight: 300
+          font-size: 1.35em
+          text-align: right
+          right: 0
+          padding-right: 15%
+          padding-left: 15%
+          width: 100%
+
+        .intro
+          position: absolute
+          display: none
+          font-weight: 300
+          font-size: 1.1em
+          width: 100%
+          padding: 20px 15%
+          left: 0
+
+        &:hover
+          .intro
+            display: block
+
+          h2
+            display: none
+
+    .project-row:nth-child(2n+1) .project:nth-child(2n+1),
+    .project-row:nth-child(2n+0) .project:nth-child(2n+0)
+      background-color: #000
+      color: #FFF
