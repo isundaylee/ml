@@ -7,9 +7,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body{id: params[:controller] + '_' + params[:action]}
-    .container
+    %header.container#header
       = image_tag 'logo.png', id: 'nav_logo'
-      %ul#nav.init-hide
+      %span#name Opera of the Future
+      %ul#nav
         %li= link_to 'Homepage', root_path
         %li= link_to 'Projects', projects_path
         %li= link_to 'People', '#'

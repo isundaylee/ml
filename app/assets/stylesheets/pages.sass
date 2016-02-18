@@ -1,29 +1,6 @@
 #pages_homepage
-  .init-hide
-    opacity: 0
-
-  #nav_logo, footer
-    display: none
-
-  #logo
-    width: 40%
-    display: block
-    margin: 3vh auto 0
-
-  h1
-    font-weight: 300
-    text-align: center
-    font-size: 3em
-    margin-top: -30px
-
-  .intro
-    font-weight: 300
-    font-size: 1.2em
-    margin-top: 80px
-
-#pages_projects
   #projects
-    margin-top: 50px
+    padding: 50px 20px 30px
 
     .project-row
       @include fill-parent()
@@ -33,7 +10,7 @@
         @include span-columns(1 of 4, table)
 
         margin-top: 50px
-        height: 268px
+        height: 242px
         padding: 10px 30px
         position: relative
 
@@ -49,21 +26,28 @@
 
         .intro
           position: absolute
-          display: none
+          opacity: 0
           font-weight: 300
-          font-size: 1.1em
+          font-size: 1em
           width: 100%
-          padding: 20px 15%
+          padding: 30px
+          margin: 0
+          top: 0
           left: 0
 
         &:hover
           .intro
-            display: block
+            opacity: 1
 
           h2
-            display: none
+            opacity: 0
 
     .project-row:nth-child(2n+1) .project:nth-child(2n+1),
     .project-row:nth-child(2n+0) .project:nth-child(2n+0)
-      background-color: #000
+      background-color: rgba(0, 0, 0, 0.5)
+      color: #FFF
+
+    .project-row:nth-child(2n+1) .project:nth-child(2n+0),
+    .project-row:nth-child(2n+0) .project:nth-child(2n+1)
+      background-color: rgba(255, 255, 255, 0.35)
       color: #FFF
